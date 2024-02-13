@@ -1,4 +1,108 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Merriweather", serif;
+}
+
+body {
+  background: #efefef;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding-inline: 10px;
+  padding-block: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 340px;
+}
+
+.header-right {
+  display: flex;
+  flex-grow: 1;
+  justify-content: end;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo img {
+  width: 75px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.icons .icon {
+  margin-right: 20px;
+  color: #f0efef;
+  transition: color 0.4s ease;
+  padding-right: 5px;
+}
+
+.icons .icon {
+  font-size: x-small;
+}
+.icons .icon:hover {
+  color: rgb(184, 120, 78);
+  cursor: pointer;
+}
+
+.header-right .search-container {
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding-inline: 5px;
+  width: 65%;
+  margin-left: 30%;
+}
+
+.header-right .search-container input[type="text"] {
+  padding: 8px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+}
+
+.header-right .search-container .icon {
+  margin: 0 10px;
+  color: #4e4d4d;
+}
+
+.header-right img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-left: 30px;
+}
+
+.user-status {
+  position: relative;
+  margin-top: 5px;
+
+  margin-right: 20px;
+}
+
+.user-status .status {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: green;
+  border: 1px solid #fff;
 }

@@ -2,8 +2,50 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=PT+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unity - Book</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="header-left">
+        <div class="logo">
+          <img src="./Images/logo.png" alt="Unity Logo" />
+        </div>
+        <div class="icons">
+          <i class="icon" data-feather="bell"></i>
+          <i class="icon" data-feather="message-circle"></i>
+          <i class="icon" data-feather="video"></i>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="search-container">
+          <i class="icon fas fa-search"></i>
+          <input type="text" placeholder="Search..." />
+        </div>
+        <div class="user-status">
+          <img src="./Images/user.jpg" alt="User Photo" />
+          <span class="status"></span>
+          <!-- Status indicator -->
+        </div>
+      </div>
+    </header>
+
+    <!-- Script to activate Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+  </body>
 </html>
