@@ -2,16 +2,35 @@
   margin: 0;
   padding: 0;
   font-family: "Merriweather", serif;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
 body {
   background: #efefef;
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.iner-cont {
+  display: flex;
+}
+.main-content {
+  position: -webkit-sticky;
+  margin-left: 100px;
+}
+
+/* Styles for header part of the page */
 
 header {
-  background-color: #333;
+  background-color: #046b68;
   color: #fff;
-  padding-inline: 10px;
+  padding-inline: 5px;
   padding-block: 4px;
   display: flex;
   justify-content: space-between;
@@ -22,7 +41,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 340px;
+  width: 280px;
 }
 
 .header-right {
@@ -40,21 +59,21 @@ header {
 }
 
 .logo img {
-  width: 75px;
+  width: 100px;
   height: auto;
-  margin-right: 20px;
+}
+
+.icons {
+  margin-top: 10px;
 }
 
 .icons .icon {
   margin-right: 20px;
   color: #f0efef;
   transition: color 0.4s ease;
-  padding-right: 5px;
+  padding-right: 2px;
 }
 
-.icons .icon {
-  font-size: x-small;
-}
 .icons .icon:hover {
   color: rgb(184, 120, 78);
   cursor: pointer;
@@ -92,8 +111,6 @@ header {
 .user-status {
   position: relative;
   margin-top: 5px;
-
-  margin-right: 20px;
 }
 
 .user-status .status {
@@ -103,6 +120,154 @@ header {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: green;
+  background-color: #26fe26;
   border: 1px solid #fff;
+}
+
+/* Left sidebar styling */
+
+nav {
+  position: absolute;
+  margin-top: 58px;
+  width: 90px;
+  height: 91vh;
+  overflow-y: unset;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  overflow: hidden;
+  transition: width 0.2s linear;
+  box-shadow: width 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  position: relative;
+  color: rgb(51, 50, 50);
+  font-size: 14px;
+  display: table;
+  width: 300px;
+  padding-block: 8px;
+  padding-right: 5px;
+}
+
+li a i {
+  position: relative;
+  color: #0aa7a1;
+  width: 90px;
+  height: 35px;
+  top: 14px;
+  font-size: 22px;
+  text-align: center;
+}
+
+li {
+  margin-right: 1px;
+  border-radius: 3px;
+}
+
+.nav-item {
+  position: relative;
+  top: 12px;
+  font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+li:hover {
+  background: #eee;
+}
+
+nav:hover {
+  width: 240px;
+  transition: all 0.5s ease;
+}
+
+.more-cont {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 15px;
+}
+
+.more {
+  width: 100%;
+  margin-top: 10px;
+  margin-inline: 10px;
+  color: hsl(235, 86%, 74%);
+  font-size: 17px;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.more:hover {
+  color: hsl(239, 100%, 50%);
+  transition: all 0.7s ease;
+  background-color: #e5e4e4;
+}
+
+.leftnav-hr {
+  margin-inline: 10px;
+  color: #bbb9b9;
+}
+.following-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  color: #4e4d4d;
+}
+
+.shortcut-cont:hover {
+  color: black;
+  transition: all 0.5s ease-out;
+}
+
+.following-title {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.following-links {
+  margin-top: 15px;
+}
+
+.following-links a {
+  padding-inline: 25px;
+  border-radius: 3px;
+}
+
+.following-links a:hover {
+  background: rgba(121, 120, 120, 0.1);
+}
+
+.following-img {
+  width: 30px;
+  height: 27px;
+
+  border-radius: 25px;
+}
+
+.following-links a span {
+  padding-left: 35px;
+}
+
+.logout-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-inline: 10px;
+  border: 1px solid red;
+  padding-block: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-cont:hover {
+  color: white;
+  margin-inline: 40px;
+  background-color: red;
+  transition: all 0.5s ease;
 }

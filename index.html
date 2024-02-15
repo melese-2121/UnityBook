@@ -10,42 +10,122 @@
     />
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
+    <script
+      src="https://kit.fontawesome.com/04a22e07a6.js"
+      crossorigin="anonymous"
+    ></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unity - Book</title>
   </head>
   <body>
-    <header>
-      <div class="header-left">
-        <div class="logo">
-          <img src="./Images/logo.png" alt="Unity Logo" />
+    <div class="container">
+      <header>
+        <div class="header-left">
+          <div class="logo">
+            <img src="./Images/logo.png" alt="Unity Logo" />
+          </div>
+          <div class="icons">
+            <i class="icon" data-feather="bell"></i>
+            <i class="icon" data-feather="message-circle"></i>
+            <i class="icon" data-feather="video"></i>
+          </div>
         </div>
-        <div class="icons">
-          <i class="icon" data-feather="bell"></i>
-          <i class="icon" data-feather="message-circle"></i>
-          <i class="icon" data-feather="video"></i>
+        <div class="header-right">
+          <div class="search-container">
+            <i class="icon fas fa-search"></i>
+            <input type="text" placeholder="Search..." />
+          </div>
+          <div class="user-status">
+            <img src="./Images/user.jpg" alt="User Photo" />
+            <span class="status"></span>
+            <!-- Status indicator -->
+          </div>
         </div>
-      </div>
-      <div class="header-right">
-        <div class="search-container">
-          <i class="icon fas fa-search"></i>
-          <input type="text" placeholder="Search..." />
-        </div>
-        <div class="user-status">
-          <img src="./Images/user.jpg" alt="User Photo" />
-          <span class="status"></span>
-          <!-- Status indicator -->
-        </div>
-      </div>
-    </header>
+      </header>
 
-    <!-- Script to activate Feather Icons -->
-    <script>
-      feather.replace();
-    </script>
+      <div class="iner-cont">
+        <nav>
+          <ul>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-circle-plus"></i>
+                <span class="nav-item">Latest News</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-people-group"></i>
+                <span class="nav-item">Groups</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-person-walking-arrow-right"></i>
+                <span class="nav-item">Find Friends</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-cart-plus"></i>
+                <span class="nav-item">Shop now</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-photo-film"></i>
+                <span class="nav-item">Watch Now</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="more-cont"><a href="#" class="more"> more..</a></div>
+          <hr class="leftnav-hr" />
+
+          <div class="following-cont">
+            <h4 class="following-title">following</h4>
+          </div>
+
+          <div class="following-links">
+            <a href="#">
+              <img
+                src="./Images/comedy.jpeg"
+                class="following-img"
+                alt="image"
+              />
+              <span>Funny videos</span></a
+            >
+            <a href="#">
+              <img src="./Images/web.jpg" class="following-img" alt="image" />
+              <span> Web tech</span></a
+            >
+            <a href="#">
+              <img
+                src="./Images/web_design.png"
+                class="following-img"
+                alt="image"
+              />
+              <span>Design</span></a
+            >
+            <a href="#">
+              <img src="./Images/video.jpg" class="following-img" alt="image" />
+              <span>Ethio movies</span></a
+            >
+          </div>
+
+          <div class="logout-cont">
+            <i class="fa-solid fa-right-from-bracket"></i>
+          </div>
+        </nav>
+
+        <div class="main-content">Here is some text</div>
+        <div class="right-sidebar">Here is some text</div>
+      </div>
+
+      <!-- Script to activate Feather Icons -->
+      <script>
+        feather.replace();
+      </script>
+    </div>
   </body>
 </html>
