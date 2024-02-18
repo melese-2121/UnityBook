@@ -24,7 +24,7 @@ body {
 .main-content {
   object-fit: calc(100% - 10px);
   margin-left: 120px;
-  flex: 2;
+  flex: 1;
   flex-basis: 70%;
   background: #fff;
   margin-top: 4px;
@@ -583,6 +583,7 @@ nav:hover {
   transform: translateY(-50%);
 }
 .shared-story-cont .slide-button#prev-slide {
+  display: none;
   right: -10px;
   color: red;
   margin-left: 5px;
