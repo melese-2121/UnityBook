@@ -8,25 +8,27 @@
 }
 
 body {
-  background: hsla(0, 1%, 40%, 0.282);
+  background: hsla(0, 1%, 40%, 0.167);
+  overflow-y: hidden;
 }
 .container {
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
-  overflow-y: hidden;
+  position: relative;
 }
 
 .iner-cont {
   display: flex;
 }
 .main-content {
-  object-fit: calc(100% - 10px);
+  flex: 1; /* This will make the main content area take up remaining space */
+  overflow-y: auto;
+  position: relative;
   margin-left: 120px;
-  flex: 1;
   flex-basis: 70%;
-  background: #fff;
   margin-top: 4px;
   border-radius: 4px;
   padding-inline: 10px;
@@ -162,7 +164,7 @@ nav {
   top: 0;
   bottom: 0;
   left: 0;
-  background: #fffffff1;
+  background: #fffffffb;
   overflow: hidden;
   transition: width 0.2s linear;
   box-shadow: width 20px 35px rgba(0, 0, 0, 0.1);
@@ -206,12 +208,13 @@ li {
 }
 
 li:hover {
-  background: #807d7d41;
+  background: #c5c1c141;
 }
 
 nav:hover {
+  border-right: 1px solid rgb(236, 234, 234);
   width: 270px;
-  transition: all 0.6s ease;
+  transition: all 0.7s ease;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -498,7 +501,6 @@ nav:hover {
 }
 
 .shared-story-cont {
-  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -526,9 +528,7 @@ nav:hover {
     transform: translateX(5px); /* Move right 30px */
   }
 }
-.shared-story-cont .img-list::-webkit-scrollbar {
-  display: none;
-}
+
 .shared-story-cont .img-list .img-item {
   width: 142px;
   height: 180px;
@@ -591,4 +591,150 @@ nav:hover {
 
 .shared-story-cont .slide-button#next-slide {
   color: red;
+}
+/* .post-cont {
+  position: relative;
+  overflow-y: scroll;
+} */
+
+.post-form-cont {
+  margin-block: 20px;
+  padding-inline: 20px;
+  padding-block: 10px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+/* Target the scrollbar */
+/* .post-cont::-webkit-scrollbar {
+  display: none;
+} */
+
+.post-form-cont .user-cont {
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+  background-color: white;
+  max-width: max-content;
+  padding-inline: 12px;
+  padding-block: 5px;
+}
+.post-form-cont .user-cont:hover {
+  background: #4e4d4d18;
+  transition: all 0.6s ease;
+  border-radius: 3px;
+}
+.post-form-cont .user-cont .user-info-cont {
+  margin-left: 10px;
+}
+.post-form-cont .user-cont .user-info-cont .user-name {
+  font-weight: bold;
+  font-size: large;
+}
+.post-form-cont .user-cont .user-info-cont .user-visiblity {
+  font-size: small;
+}
+
+.post-form-cont .user-cont img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.styled-textarea {
+  width: 90%;
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid #c9c9c9;
+  padding: 10px 0;
+  font-size: 16px;
+  resize: none; /* Prevent textarea resizing by users */
+  outline: none;
+}
+
+.styled-textarea::placeholder {
+  color: #999999;
+}
+.icon-container {
+  display: flex;
+  justify-content: space-around; /* Center items with space around */
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.icon-container > div {
+  display: flex;
+  align-items: center;
+}
+
+.icon-container .icon,
+.photo-video:hover,
+.feelings:hover {
+  cursor: pointer;
+  color: #808080; /* Initial color */
+}
+
+.icon-container .live .icon {
+  font-size: 24px;
+  color: #ff6347; /* Red color on hover for live video icon */
+  border-radius: 20px; /* Rounded border radius on hover */
+}
+
+.icon-container .photo-video .icon {
+  margin-right: 5px;
+  transition: color 0.3s ease, border-radius 0.3s ease; /* Add transition for color change and border radius */
+  border-radius: 5px; /* Initial border radius */
+  padding: 5px; /* Padding for better spacing */
+  font-size: 24px;
+  color: #4b0082; /* Indigo color on hover for photo/video icon */
+  border-radius: 20px; /* Rounded border radius on hover */
+}
+
+.icon-container .feelings .icon {
+  margin-right: 5px;
+  transition: color 0.3s ease, border-radius 0.3s ease; /* Add transition for color change and border radius */
+  border-radius: 5px; /* Initial border radius */
+  padding: 5px; /* Padding for better spacing */
+  margin-right: 5px;
+  transition: color 0.3s ease, border-radius 0.3s ease; /* Add transition for color change and border radius */
+  border-radius: 5px; /* Initial border radius */
+  padding: 5px; /* Padding for better spacing */
+  font-size: 24px;
+  color: #32cd32; /* Green color on hover for feelings icon */
+  border-radius: 20px; /* Rounded border radius on hover */
+}
+
+.icon-container .text {
+  font-size: 16px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.header {
+  background-color: hsl(0, 0%, 41%);
+  padding: 10px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  height: 300px;
+}
+
+.post-image-container {
+  background-color: #26fe26;
+  width: 85%;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.action-container {
+  background-color: #054df5;
+  padding: 10px;
+  width: 15%;
 }

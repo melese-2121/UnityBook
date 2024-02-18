@@ -23,3 +23,8 @@ const initSlider = () => {
 };
 
 window.addEventListener("load", initSlider);
+
+document.addEventListener("DOMContentLoaded", function () {
+  var innerContainer = document.querySelector(".scrollable-content");
+  innerContainer.scrollTop = 1; // Forces the container to scroll
+});
