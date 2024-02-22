@@ -157,7 +157,7 @@ header {
 nav {
   z-index: 1;
   position: absolute;
-  margin-top: 58px;
+  margin-top: 67px;
   width: 90px;
   height: 91vh;
   overflow-y: unset;
@@ -188,7 +188,7 @@ li a i {
   position: relative;
   color: #0aa7a1;
   width: 90px;
-  height: 35px;
+  height: 33px;
   top: 14px;
   font-size: 22px;
   text-align: center;
@@ -592,23 +592,27 @@ nav:hover {
 .shared-story-cont .slide-button#next-slide {
   color: red;
 }
-/* .post-cont {
+/* .
+ {
   position: relative;
   overflow-y: scroll;
 } */
 
 .post-form-cont {
   margin-block: 20px;
-  padding-inline: 20px;
-  padding-block: 10px;
+  padding-block: 1px;
   height: 200px;
   background-color: #fff;
   border-radius: 5px;
 }
+.post-form-cont-1 {
+  padding-block: 15px;
+  padding-inline: 20px;
+}
 /* Target the scrollbar */
-/* .post-cont::-webkit-scrollbar {
+.main-content::-webkit-scrollbar {
   display: none;
-} */
+}
 
 .post-form-cont .user-cont {
   display: flex;
@@ -676,32 +680,32 @@ nav:hover {
 
 .icon-container .live .icon {
   font-size: 24px;
-  color: #ff6347; /* Red color on hover for live video icon */
-  border-radius: 20px; /* Rounded border radius on hover */
+  color: #ff6347;
+  border-radius: 20px;
 }
 
 .icon-container .photo-video .icon {
   margin-right: 5px;
-  transition: color 0.3s ease, border-radius 0.3s ease; /* Add transition for color change and border radius */
-  border-radius: 5px; /* Initial border radius */
-  padding: 5px; /* Padding for better spacing */
+  transition: color 0.3s ease, border-radius 0.3s ease;
+  border-radius: 5px;
+  padding: 5px;
   font-size: 24px;
-  color: #4b0082; /* Indigo color on hover for photo/video icon */
-  border-radius: 20px; /* Rounded border radius on hover */
+  color: #4b0082;
+  border-radius: 20px;
 }
 
 .icon-container .feelings .icon {
   margin-right: 5px;
-  transition: color 0.3s ease, border-radius 0.3s ease; /* Add transition for color change and border radius */
-  border-radius: 5px; /* Initial border radius */
-  padding: 5px; /* Padding for better spacing */
+  transition: color 0.3s ease, border-radius 0.3s ease;
+  border-radius: 5px;
+  padding: 5px;
   margin-right: 5px;
-  transition: color 0.3s ease, border-radius 0.3s ease; /* Add transition for color change and border radius */
-  border-radius: 5px; /* Initial border radius */
-  padding: 5px; /* Padding for better spacing */
+  transition: color 0.3s ease, border-radius 0.3s ease;
+  border-radius: 5px;
+  padding: 5px;
   font-size: 24px;
-  color: #32cd32; /* Green color on hover for feelings icon */
-  border-radius: 20px; /* Rounded border radius on hover */
+  color: #32cd32;
+  border-radius: 20px;
 }
 
 .icon-container .text {
@@ -709,32 +713,167 @@ nav:hover {
 }
 
 .card {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
   background: #fff;
-  border: 1px solid #ccc;
   border-radius: 8px;
-  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.header {
-  background-color: hsl(0, 0%, 41%);
+.full-width-div {
+  width: 100%;
+  margin-bottom: 10px;
   padding: 10px;
+  border-radius: 4px;
 }
 
-.content {
+.full-width-div h2,
+.full-width-div p {
+  margin: 0;
+}
+
+.outer-container {
   display: flex;
-  justify-content: space-between;
-  height: 300px;
 }
 
-.post-image-container {
-  background-color: #26fe26;
-  width: 85%;
-  margin: auto;
-  padding: 20px 0;
-}
-
-.action-container {
-  background-color: #054df5;
+.first-inner-div {
+  flex: 0 0 30%;
+  background-color: #fff;
   padding: 10px;
-  width: 15%;
+}
+
+.second-inner-div {
+  flex: 1;
+  max-height: 600px;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.outer-container-2 {
+  display: flex;
+  flex-direction: column;
+  height: 360px;
+}
+
+.first-inner-div-2 {
+  height: 20%;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.second-inner-div-2 {
+  flex: 1;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.post-user-cont {
+  display: flex;
+  justify-content: start;
+  cursor: pointer;
+  background-color: white;
+  max-width: max-content;
+  padding-inline: 5px;
+  padding-block: 2px;
+}
+.post-user-cont .user-info-cont {
+  margin-left: 10px;
+}
+.post-user-cont .user-info-cont .user-name {
+  font-weight: bold;
+}
+.post-user-cont .user-info-cont .user-visiblity {
+  font-size: small;
+}
+
+.post-user-cont img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.icon-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icon {
+  margin-bottom: 20px;
+}
+.icon i {
+  font-size: 26px;
+  color: #999;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+.icon i:hover {
+  color: #ff8c00;
+  transform: scale(1.2);
+  transition: all 0.6s ease;
+}
+.icon i.fa-thumbs-up {
+  color: #4caf4f82;
+}
+.icon i.fa-thumbs-down {
+  color: #f443367e;
+}
+.icon i.fa-share {
+  color: #2195f363;
+}
+.icon i.fa-comment {
+  color: #ff990078;
+}
+.icon i.fa-thumbs-up:hover {
+  color: #4caf4ff4;
+}
+.icon i.fa-thumbs-down:hover {
+  color: #f44336f0;
+}
+.icon i.fa-share:hover {
+  color: #2195f3;
+}
+.icon i.fa-comment:hover {
+  color: #ff9900;
+}
+
+.top-posted-img {
+  border-radius: 20px;
+  width: 96%;
+  height: auto;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.top-posted-img img {
+  width: 100%;
+  height: 100%;
+  max-height: 500px;
+  display: block;
+  object-fit: contain;
+}
+
+.comment-section {
+  width: 100%;
+  padding: 20px;
+}
+.comment-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.comment-input {
+  flex: 1;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  padding: 5px;
+  font-size: 16px;
+  resize: none; /* Prevent resizing */
+}
+.comment-input::placeholder {
+  color: #999;
+}
+.comment-icon {
+  margin-right: 10px;
+  color: #666;
 }
